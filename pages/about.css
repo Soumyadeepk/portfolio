@@ -92,6 +92,7 @@ nav img {
 .about_image img {
   height: 50vh;
   width: 20vw;
+  object-fit: cover;
 }
 
 /* about heading */
