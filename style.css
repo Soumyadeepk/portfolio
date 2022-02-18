@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+
+/* universal styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: #a1a1a1;
+  font-family: "EB Garamond", serif;
+  font-size: 1.1rem;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  overflow-x: hidden;
+  cursor: default;
+}
+/* navigation bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7vh;
+  margin-top: 4vh;
+}
+
+/* navigation logo */
+nav img {
+  height: 6vh;
+  margin-left: 8vw;
+  cursor: pointer;
+}
+
+/* hamburger icon */
+.show_nav {
+  display: none;
+}
+
+/* menu lists */
+.menu {
+  display: flex;
+  font-size: 1.1rem;
+  justify-content: space-around;
+  list-style: none;
+  margin-right: 8vw;
+  width: 30%;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #a1a1a1;
+}
+
+/* link underline effect */
+.menu li a::after {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 1px;
+  transition: 0.3s all ease;
+  width: 0%;
+}
+.menu li a:hover::after {
+  width: 100%;
+}
+
+/* hero section */
+.header {
+  margin-top: 22vh;
+  height: 69vh;
+}
+
+.header_name {
+  font-size: 3rem;
+  margin-bottom: 3vh;
+  text-align: center;
+}
+
+.header_desc {
+  letter-spacing: 0.5px;
+  line-height: 6vh;
+  text-align: center;
+}
+
+/* project heading text */
+.project_header {
+  display: none;
+}
+/* projects details cards */
+.project_detail {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30vh;
+}
+
+/* project image */
+.project_img img {
+  height: 50vh;
+  width: 21vw;
+  object-fit: cover;
+  border: 1px solid #3e3e3e;
+}
+.project_img_1 {
+  margin-left: 25vh;
+}
+.project_img_2 {
+  margin-right: 25vh;
+}
+
+/* project description */
+.project_desc {
+  width: 40%;
+}
+
+.project_desc p {
+  margin-bottom: 4vh;
+}
+
+/* project page link */
+.project_desc a img {
+  margin-top: 3vh;
+}
+/* project name heading */
+.proj_heading {
+  font-size: 1.7rem;
+}
+
+.project_desc_1 {
+  margin-right: 20vh;
+}
+.project_desc_2 {
+  margin-left: 28vh;
+}
+
+/* skill block heading */
+.skill_block {
+  font-size: 1.8rem;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+/* Skill flex */
+.skill_desc {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* skill list heading */
+.skill_list_heading {
+  font-size: 1.4rem;
+  margin-bottom: 7vh;
+  margin-top: 13vh;
+  text-align: center;
+}
+/* skill left */
+.skill_left {
+  margin-left: 10vw;
+}
+/* skill right */
+.skill_right {
+  margin-right: 10vw;
+}
+/* skill lists */
+.skill_info {
+  list-style: none;
+}
+
+/* single skill list */
+.skill_info li {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2vh;
+}
+
+/* skill progress bar */
+progress {
+  height: 3px;
+  margin-left: 4vw;
+  width: 13vw;
+}
+/* webkit progress bar */
+progress::-webkit-progress-bar {
+  background: #a1a1a1;
+}
+/* progress bar inside */
+progress::-webkit-progress-value {
+  background: rgb(65, 65, 65);
+}
+
+/* footer heading */
+.footer_heading {
+  margin-top: 40vh;
+  text-align: center;
+}
+
+/* social media links */
+.social_links {
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+  text-align: center;
+}
+.social_links div {
+  display: inline-block;
+}
+.social_links div:nth-child(1) {
+  margin-left: -3vw;
+}
+.social_links a {
+  font-size: 0.9rem;
+  margin-left: 4vw;
+  text-decoration: none;
+}
+
+/* social links effect */
+.social_links div::after {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 1px;
+  margin-left: 4vw;
+  transition: 0.3s all ease;
+  width: 0%;
+}
+.social_links div:hover::after {
+  width: 30%;
+}
+
+/* copyright 2021 */
+.copyright {
+  font-size: 0.9rem;
+  margin-bottom: 10vh;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 15px;
+}
+
+/* ------------ Responsive Style for Mobile ------------- */
+
+@media screen and (max-width: 768px) {
+  /* nav menu mobile */
+  nav {
+    height: 4vh;
+    margin-top: 2vh;
+  }
+  nav img {
+    height: 5vh;
+    margin-left: 6vw;
+  }
+
+  /* hamburger icon */
+  .show_nav {
+    cursor: pointer;
+    display: block;
+    margin-right: 6vw;
+  }
+
+  .show_nav i {
+    font-size: 1.5rem;
+  }
+
+  /* menu lists nav */
+  .menu {
+    display: none;
+  }
+
+  .menu_show {
+    align-items: center;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    height: 60vh;
+    margin-right: 0vw;
+    position: absolute;
+    top: 7vh;
+    width: 100%;
+    background-color: black;
+    z-index: 999;
+  }
+
+  .menu li {
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    text-align: center;
+    margin-right: 0vw;
+  }
+
+  /* hero section mobile */
+  .header {
+    margin-left: 1vw;
+    margin-top: 25vh;
+    width: 95vw;
+  }
+
+  .header_name {
+    font-size: 2rem;
+    margin-bottom: 1.5vh;
+  }
+
+  .header_desc {
+    font-size: 1rem;
+    line-height: 3vh;
+  }
+
+  .header_desc img {
+    margin-top: 4vh;
+  }
+
+  /* project heading text */
+  .project_header {
+    display: block;
+    text-align: center;
+    margin-top: -9vh;
+    font-size: 1.4rem;
+  }
+
+  /* projects cards mobile */
+  .project_detail {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0vh;
+  }
+
+  /* project image */
+  .project_img img {
+    height: 40vh;
+    width: 70vw;
+    margin-top: 5vh;
+  }
+  .project_img_1 {
+    margin-left: 0vh;
+  }
+  .project_img_2 {
+    margin-right: 0vh;
+  }
+
+  /* project description */
+  .project_desc {
+    width: 70%;
+    margin-top: 4vh;
+    margin-bottom: 7vh;
+  }
+
+  .project_desc p {
+    font-size: 0.9rem;
+  }
+  /* project name heading */
+  .proj_heading {
+    font-size: 1.4rem;
+  }
+
+  .project_detail_2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .project_desc_1 {
+    margin-right: 0vh;
+  }
+  .project_desc_2 {
+    margin-left: 0vh;
+  }
+
+  /* skill block heading */
+  .skill_block {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-top: 10vh;
+  }
+
+  /* Skill flex */
+  .skill_desc {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* skill list heading */
+  .skill_list_heading {
+    font-size: 1.4rem;
+    margin-bottom: 4vh;
+    margin-top: 7vh;
+    text-align: center;
+  }
+  /* skill left */
+  .skill_left {
+    margin-left: 0vw;
+  }
+  /* skill right */
+  .skill_right {
+    margin-right: 0vw;
+  }
+  /* skill lists */
+  .skill_info {
+    list-style: none;
+  }
+
+  /* single skill list */
+  .skill_info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2vh;
+    margin-left: 0vw;
+  }
+
+  /* skill progress bar */
+  progress {
+    height: 3px;
+    margin-left: 10vw;
+    width: 33vw;
+  }
+
+  /* footer heading */
+  .footer_heading {
+    margin-top: 20vh;
+  }
+
+  /* copyright 2021 */
+  .copyright {
+    margin-bottom: 10vh;
+  }
+}

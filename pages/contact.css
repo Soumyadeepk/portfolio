@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+
+/* universal styles */
+* {
+  background-color: black;
+  box-sizing: border-box;
+  color: #a1a1a1;
+  font-family: "EB Garamond", serif;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow: hidden;
+  cursor: default;
+}
+/* navigation bar */
+nav {
+  align-items: center;
+  display: flex;
+  height: 7vh;
+  justify-content: space-between;
+  margin-top: 4vh;
+}
+
+/* navigation logo */
+nav img {
+  height: 6vh;
+  margin-left: 8vw;
+  cursor: pointer;
+}
+
+/* hamburger icon */
+.show_nav {
+  display: none;
+}
+
+/* menu lists */
+.menu {
+  display: flex;
+  font-size: 1.1rem;
+  justify-content: space-around;
+  list-style: none;
+  margin-right: 8vw;
+  width: 30%;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #a1a1a1;
+}
+
+/* link underline effect */
+.menu li a::after {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 1px;
+  transition: 0.3s all ease;
+  width: 0%;
+}
+.menu li a:hover::after {
+  width: 100%;
+}
+
+/* scrollbar styling */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* scrollbar thumb or scroll styling */
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 15px;
+}
+
+/* contact hero heading */
+.contact_heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 20vh;
+}
+/* contact hero description */
+.contact_desc {
+  text-align: center;
+  margin-top: 3vh;
+  font-size: 1.1rem;
+}
+
+.contact_links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  margin-top: 15vh;
+  width: 40%;
+  margin-left: 30vw;
+}
+
+.contact_links li a {
+  text-decoration: none;
+  color: #a1a1a1;
+  font-size: 1.2rem;
+}
+/* contact form */
+.contact_form {
+  margin-top: 30vh;
+  text-align: center;
+}
+
+/* input labels */
+label {
+  margin-left: -34vw;
+}
+
+/* name and email input */
+input[type="text"] {
+  height: 7vh;
+  width: 40vw;
+  border: none;
+  outline: none;
+  border: 1px solid #a1a1a1;
+  border-radius: 25px;
+  margin-bottom: 8vh;
+  margin-top: 2vh;
+  padding: 15px;
+}
+
+/* message textarea */
+textarea {
+  resize: none;
+  margin-top: 2vh;
+  width: 40vw;
+  height: 30vh;
+  border-radius: 25px;
+  outline: none;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+/* sumbit button */
+.btn_submit {
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  border: 1px solid #a1a1a1;
+  border-radius: 25px;
+  margin-top: 4vh;
+  cursor: pointer;
+}
+/* footer heading */
+.footer_heading {
+  margin-top: 25vh;
+  text-align: center;
+}
+
+/* social media links */
+.social_links {
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+  text-align: center;
+}
+.social_links div {
+  display: inline-block;
+}
+.social_links div:nth-child(1) {
+  margin-left: -3vw;
+}
+.social_links a {
+  font-size: 0.9rem;
+  margin-left: 4vw;
+  text-decoration: none;
+}
+
+/* social links effect */
+.social_links div::after {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 1px;
+  margin-left: 4vw;
+  transition: 0.3s all ease;
+  width: 0%;
+}
+.social_links div:hover::after {
+  width: 30%;
+}
+
+/* copyright 2021 */
+.copyright {
+  font-size: 0.9rem;
+  margin-bottom: 10vh;
+  text-align: center;
+}
+
+/* ------------ Responsive Style for Mobile ------------- */
+
+@media screen and (max-width: 768px) {
+  /* nav menu mobile */
+  nav {
+    height: 4vh;
+    margin-top: 2vh;
+  }
+  nav img {
+    height: 5vh;
+    margin-left: 6vw;
+  }
+
+  /* hamburger icon */
+  .show_nav {
+    cursor: pointer;
+    display: block;
+    margin-right: 6vw;
+  }
+
+  .show_nav i {
+    font-size: 1.5rem;
+  }
+
+  /* menu lists nav */
+  .menu {
+    display: none;
+  }
+
+  .menu_show {
+    align-items: center;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    height: 60vh;
+    margin-right: 0vw;
+    position: absolute;
+    top: 7vh;
+    width: 100%;
+    z-index: 100;
+    background-color: black;
+  }
+
+  .menu li {
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    text-align: center;
+    margin-right: 0vw;
+  }
+
+  .contact_links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vh;
+  }
+
+  .contact_links li {
+    margin-top: 2vh;
+  }
+  .contact_links li a {
+    text-decoration: none;
+    color: #a1a1a1;
+    font-size: 1.2rem;
+  }
+
+  /* contact hero */
+  .contact_hero {
+    margin-left: 1vw;
+    width: 95vw;
+  }
+  /* contact hero heading */
+  .contact_heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 25vh;
+  }
+  /* contact hero description */
+  .contact_desc {
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 1rem;
+  }
+
+  /* contact form */
+  .contact_form {
+    margin-top: 26vh;
+    text-align: center;
+  }
+
+  /* input labels */
+  label {
+    margin-left: 0;
+  }
+
+  /* name and email input */
+  input[type="text"] {
+    height: 3vh;
+    width: 70vw;
+    font-size: 0.9rem;
+    margin-bottom: 4vh;
+    margin-top: 2vh;
+  }
+
+  /* message textarea */
+  textarea {
+    resize: none;
+    margin-top: 2vh;
+    width: 75vw;
+    height: 20vh;
+
+    font-size: 1rem;
+  }
+
+  /* sumbit button */
+  .btn_submit {
+    margin-top: 2vh;
+  }
+
+  /* footer heading */
+  .footer_heading {
+    margin-top: 25vh;
+  }
+
+  /* copyright 2021 */
+  .copyright {
+    margin-bottom: 10vh;
+  }
+}
