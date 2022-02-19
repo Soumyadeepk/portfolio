@@ -270,8 +270,12 @@ progress::-webkit-progress-value {
   }
 
   /* menu lists nav */
-  .menu {
+
+  .menu li:nth-child(1) {
     display: none;
+  }
+  .menu li:nth-child(2) {
+    margin-right: 4vw;
   }
 
   .menu_show {
