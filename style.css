@@ -85,7 +85,9 @@ nav img {
 
 /* project heading text */
 .project_header {
-  display: none;
+  text-align: center;
+  margin-bottom: 10vh;
+  font-size: 1.3rem;
 }
 /* projects details cards */
 .project_detail {
